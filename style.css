@@ -1,12 +1,12 @@
 body {
 	background: #fff;
-	font: 15px Arial, Helvetica, sans-serif;
+	font: 15px sans-serif;
 	line-height: 1.4;
 	margin: 50px 0;
 	margin-bottom: 100px;
 }
 em {
-	color: #999;
+	color: green;
 }
 p {
 	line-height: 1.4;
@@ -26,7 +26,7 @@ blockquote {
 }
 #resume {
 	margin: 0 auto;
-	max-width: 480px;
+	max-width: 600px;
 	padding: 0 20px;
 }
 #basics {
