@@ -1,52 +1,23 @@
 {{#if resume.work.length}}
-<section id="work">
-	<h2>Work</h2>
-	{{#each resume.work}}
-	<div class="item">
-		{{#if company}}
-		<h3 class="name">
-			{{company}}
-		</h3>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{startDate}}
-			</span>
-			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
-			{{/if}}
+	<section id="work">
+		<h2><strong>Work Experience</strong></h2>
+		{{#each resume.work}}
+		<div class="item">
+			<dl>
+				<dt>Dates:</dt>
+					<dd>{{startDate}}-{{endDate}}</dd>
+				<dt>Position:</dt>
+					<dd><h3>{{position}}</h3></dd>
+				<dt>Employer:</dt>
+					<dd><h3>{{company}}</h3></dd>
+				<dt>Main activities:</dt>
+					<dd><ul>
+						{{#each highlights}}
+							<li>{{.}}</li>
+						{{/each}}
+					</ul></dd>
+			</dl>
 		</div>
-		{{#if position}}
-		<div class="position">
-			{{position}}
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">{{website}}</a>
-		</div>
-		{{/if}}
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#if highlights.length}}
-		<ul class="highlights">
-			{{#each highlights}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
-	</div>
-	{{/each}}
-</section>
+		{{/each}}
+	</section>
 {{/if}}
